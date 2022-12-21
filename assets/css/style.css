@@ -1,0 +1,212 @@
+.navContainer {
+  background-color: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 2pX solid rgba(255, 255, 255, 0.212);
+}
+
+.header {
+  color: white;
+  max-width: 1300px;
+  max-height: 90px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+}
+.header .iconLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  margin-right: 20px;
+}
+.header .iconLinks img {
+  padding: 0 10px;
+  transition: 0.1s;
+}
+.header .iconLinks img:hover {
+  transform: scale(105%);
+}
+.header .leftHeader {
+  display: flex;
+  flex-direction: row;
+}
+.header .leftHeader .logo {
+  padding-top: 12px;
+  max-width: 118px;
+  min-width: 90px;
+  width: 7vw;
+  margin-right: 50px;
+  margin-left: 28px;
+}
+.header .leftHeader .headerMenu {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  align-items: center;
+}
+.header .leftHeader .headerMenu li {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding: 0 20px;
+  border-bottom: 4px solid transparent;
+  font-size: 18px;
+  cursor: pointer;
+}
+.header .leftHeader .headerMenu li:hover {
+  border-bottom: 4px solid rgb(33, 190, 33);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 1300px;
+  margin: auto;
+}
+.main .mainCopy {
+  color: white;
+  margin: 12vh 0 6vh 5vw;
+}
+.main .mainCopy h1 {
+  font-weight: 400;
+  font-size: 58px;
+  line-height: 1.1em;
+  margin-bottom: 0.2em;
+}
+.main .mainCopy h1 strong {
+  font-weight: 600;
+  color: rgb(33, 190, 33);
+}
+.main .mainCopy h3 {
+  font-weight: 400;
+  font-size: 26px;
+}
+.main .searchForm {
+  display: flex;
+  margin-left: 5vw;
+  flex-direction: row;
+  align-items: center;
+}
+.main .searchForm input {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Jost";
+  width: 250px;
+  outline: none;
+  padding: 6px 10px;
+  border-radius: 18px;
+  border: none;
+}
+.main .searchForm .submitBtn {
+  cursor: pointer;
+  position: relative;
+  top: 0px;
+  right: 40px;
+  padding: 2px;
+  border: NONE;
+  width: 30px;
+  border-radius: 50%;
+  transition: 0.4s;
+}
+.main .searchForm .submitBtn:hover {
+  background-color: rgba(33, 190, 33, 0.582);
+}
+
+video {
+  z-index: -2;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.responseSection {
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 20px 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 60px;
+  display: none;
+}
+.responseSection .about {
+  margin-bottom: 10px;
+}
+.responseSection .about h3 {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 36px;
+  font-weight: 500;
+  text-decoration: 2.8px underline green;
+}
+.responseSection .about p {
+  font-size: 18px;
+}
+.responseSection .score .chart {
+  position: relative;
+  width: 100%;
+  height: 32em;
+}
+.responseSection .score h3 {
+  text-align: center;
+  margin-bottom: 0px;
+  font-size: 36px;
+  font-weight: 500;
+  text-decoration: 2.8px underline green;
+}
+.responseSection .score h4 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 0.7em;
+}
+
+@media screen and (max-width: 768px) {
+  .main .mainCopy h1 {
+    font-size: 38px;
+    font-weight: 600;
+  }
+  .main .mainCopy h1 strong {
+    font-weight: 700;
+  }
+  .main .searchForm {
+    justify-content: center;
+  }
+  .responseSection {
+    width: 92%;
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  scroll-behavior: smooth;
+  min-height: 100vh;
+  padding-bottom: 10vh;
+}

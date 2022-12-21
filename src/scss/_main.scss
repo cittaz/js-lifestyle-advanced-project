@@ -1,0 +1,55 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;    
+  max-width: 1300px;
+  margin: auto;
+  .mainCopy {
+    color: white;
+    margin: 12vh 0 6vh 5vw;
+    h1 {
+      font-weight: 400;
+      font-size: 58px;
+      line-height: 1.1em;
+      margin-bottom: 0.2em;
+      strong {
+        font-weight: 600;
+        color: rgb(33, 190, 33);
+      }
+    }
+    h3 {
+      font-weight: 400;
+      font-size: 26px;
+    }
+  }
+  .searchForm {
+    display: flex;
+    margin-left: 5vw;
+    flex-direction: row;
+    align-items: center;
+    input {
+      font-size: 16px;
+      font-weight: 500;
+      font-family: 'Jost';
+      width: 250px;
+      outline: none;
+      padding: 6px 10px;
+      border-radius: 18px;
+      border: none;
+    }
+    .submitBtn {
+      cursor: pointer;
+      position: relative;
+      top: 0px;
+      right: 40px;
+      padding: 2px;
+      border: NONE;
+      width: 30px;
+      border-radius: 50%;
+      transition: .4s;
+      &:hover {
+        background-color: rgba(33, 190, 33, 0.582);
+      }
+    }
+  }
+}

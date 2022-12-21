@@ -1,0 +1,19 @@
+@media screen and (max-width: 768px) {
+  .main {
+    .mainCopy {
+      h1 {
+        font-size: 38px;
+        font-weight: 600;
+        strong {
+          font-weight: 700;
+        }
+      }
+    }
+    .searchForm {
+      justify-content: center;
+    }
+  }
+  .responseSection {
+    width: 92%;
+  }
+}
