@@ -1,7 +1,7 @@
-dist
+# dist
 node_modules
-package-lock.json
-package.json
-webpack.common.js
-webpack.prod.js
-webpack.dev.js
+# package-lock.json
+# package.json
+# webpack.common.js
+# webpack.prod.js
+# webpack.dev.js

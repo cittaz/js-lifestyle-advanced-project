@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Advanced JS project">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="2d186ed00f75a0c30da2.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>JS llfestyle project</title>
+<script defer src="runtime.bundle.js"></script><script defer src="index.bundle.js"></script><script defer src="getData.bundle.js"></script></head>
+
+<body>
+
+  <div class="navContainer">
+    <nav class="header">
+      <div class="leftHeader">
+        <a href="http://" target="_blank" rel="noopener noreferrer"><img class='logo' src="fa5abceb7656a464c227.svg" alt="Logo"></a>
+        <ul class="headerMenu">
+          <!-- <li>Cheapest cities to live</li>
+          <li>Jobs</li>
+          <li>Stories</li> -->
+        </ul>
+      </div>
+      <div>
+        <ul class="iconLinks">
+          <li><a href="https://cittaz.github.io" target="_blank"><img src="44d5bd067dec713a2bbf.svg" alt="personal website link"></a></li>
+          <li><a href="https://github.com/cittaz" target="_blank"><img src="bcfb2163360fb5763733.svg" alt="github link"></a></li>
+          <li><a href="https://www.linkedin.com/in/tommasocittadino/" target="_blank"><img src="4637f65bae0d602f0286.svg" alt="linkedin link"></a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="overlay"></div>
+  <video playsinline autoplay muted loop poster="2152fbc208e95ca5478d.png" id="bgvid">
+    <source src="1876a6dbbb68a13eeb56.mp4" type="video/mp4">
+  </video>
+
+  <div class="main">
+    <div class="mainCopy">
+      <h1>Find the <strong>best cities.</strong><br>Book your <strong>best trip.</strong></h1>
+      <h3>Type in the search box the name of a city and get all the info.</h3>
+    </div>
+    <form  class='searchForm' action="">
+      <input id='inputForm' type="text" name="searchBox">
+      <img id='submitBtn' class="submitBtn" src="f9705ffe407455bd10ed.svg" alt="search icon">
+    </form>
+  </div>
+
+  <div class="responseSection">
+    <div class="about">
+      <h3>About the city</h3>
+      <div id="injectedAbout"></div>
+    </div>
+    <div class="score">
+      <h3>Scores</h3>
+      <div class="chart">
+        <canvas id="myChart"></canvas>
+      </div>
+      <div id="injectedScore"></div>
+    </div>
+  </div>
+
+</body>
+
+</html>
