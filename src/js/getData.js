@@ -1,6 +1,3 @@
-// export default function printMe() {
-//   console.log('I get called from print.js!');
-// }
 import Chart from 'chart.js/auto';
 Chart.defaults.color = "#fff";
 Chart.defaults.font.size = 16;
@@ -75,25 +72,43 @@ function appendResponse(apiResponse) {
 }
 
 async function getData() {
-  let newUrl = await formatInput();
-  let request = await fetch(newUrl);
-  let response = await request.json();
-  return response
+  let errorSection = document.getElementById('errorSection');
+  if(errorSection) {
+    errorSection.remove();
+}
+try {
+    let newUrl = formatInput();
+    let request = await fetch(newUrl);
+    let response = await request.json();
+    if(!request.ok) {
+      throw new Error('error getting data');
+    }
+    appendResponse(response);
+  } catch(error) {
+    console.log(error.message)
+    let section = document.querySelector('.responseSection');
+    section.style.display = 'none';
+    let errorSection = document.createElement('h3');
+    errorSection.id = 'errorSection';
+    errorSection.innerHTML = 'City not found.<br>Please write the name in English.';
+    errorSection.style.textAlign = 'center';
+    errorSection.style.color = 'white';
+    errorSection.style.fontSize = '24px';
+    errorSection.style.marginTop = '50px';
+    
+    document.querySelector('body').append(errorSection);
+    }
 }
 
 submitBtn.addEventListener('click', () => {
-  getData().then((data) => {
-    appendResponse(data);
-  });
+  getData();
   inputForm.value =  '';
 });
 
 inputForm.addEventListener('keydown', (event) => {
   if(event.keyCode === 13) {
     event.preventDefault();
-    getData().then((data) => {
-      appendResponse(data);
-    })
+    getData();
     inputForm.value =  '';
   };
 }); 
